@@ -24,13 +24,13 @@ const Intro = () => {
     >
       {/* Image */}
       <motion.div
-        className="lg:w-1/2 ml-10 w-full md:ml-50 lg:ml-0"
+        className="lg:w-1/2 w-full md:ml-50 lg:ml-0"
         initial={{ scale: 0.8, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <figure className="mx-auto lg:ml-30">
+        <figure className="flex justify-center ">
           <motion.img
             className="w-[200px] rounded-full"
             src="https://res.cloudinary.com/dfhlm4cyw/image/upload/v1777485934/ChatGPT_Image_Apr_29_2026_11_57_32_PM_xjaj6w.png"
