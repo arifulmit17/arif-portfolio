@@ -1,7 +1,7 @@
 # My Portfolio Website
-A modern personal website built with React, TailwindCSS, and Framer Motion.
+A modern personal website built with React, TailwindCSS, GSAP and Framer Motion.
 
-Live link: https://ariful-haque-portfolio.netlify.app/
+Live link: https://ariful-haque.netlify.app/
 
 Features:
 1. Responsive design
@@ -17,7 +17,7 @@ Technologies:
 5. Javascript
 
 Projects
-1. Scholarship hub
-2. Tutor online
+1. Green community
+2. Skillbridge
 
 
