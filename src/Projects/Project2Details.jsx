@@ -5,6 +5,16 @@ const Project2Details = () => {
       <div className='w-11/12 mx-auto'>
   <h1 className='font-bold text-2xl text-center text-primary'>SkillBridge </h1>
 
+  {/* Description */}
+  <div className='my-5 bg-primary/20 p-5 rounded-2xl'>
+    <p>
+      SkillBridge is a full-stack platform that connects students with expert tutors. 
+      Users can browse tutors, book sessions, and leave reviews, while tutors can manage 
+      their profiles, availability, and teaching sessions. Admins oversee users, bookings, 
+      and categories to ensure smooth platform operation.
+    </p>
+  </div>
+
   {/* Tech Stack */}
   <div className='my-5 bg-primary/20 p-5 rounded-2xl'>
     <h1 className='font-bold'>Technology Stack Used</h1>
@@ -19,15 +29,7 @@ const Project2Details = () => {
     </ul>
   </div>
 
-  {/* Description */}
-  <div className='my-5 bg-primary/20 p-5 rounded-2xl'>
-    <p>
-      SkillBridge is a full-stack platform that connects students with expert tutors. 
-      Users can browse tutors, book sessions, and leave reviews, while tutors can manage 
-      their profiles, availability, and teaching sessions. Admins oversee users, bookings, 
-      and categories to ensure smooth platform operation.
-    </p>
-  </div>
+  
 
   {/* Live Link */}
   <div className='my-5 bg-primary/20 p-5 rounded-2xl'>
