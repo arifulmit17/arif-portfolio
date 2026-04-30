@@ -17,17 +17,27 @@ const fadeVariants = {
 const Projects = () => {
   const projects = [
     {
-      title: "Tutor Hire",
-      description:
-        "This site is an educational platform for teaching enthusiasts and students for benefits like tutor choice based on language, own tutorial upload.",
-      image:
-        "https://res.cloudinary.com/dfhlm4cyw/image/upload/v1777527218/Capturegreen_vedjps.png",
-      technologies: ["React", "Node.js", "MongoDB", "Firebase","TailwindCSS","Express.js","Javascript","JWT"],
-      liveUrl: "https://tutor-hire-online.netlify.app/",
-      githubUrl: "https://github.com/arifulmit17/tutor-hire-client",
-      featured: true,
-      details:"/tutor",
-    },
+  title: "SkillBridge",
+  description:
+    "A full-stack tutor marketplace connecting students with expert tutors. Users can browse tutors, book sessions, and leave reviews, while tutors manage profiles, availability, and sessions.",
+  image:
+    "https://res.cloudinary.com/dfhlm4cyw/image/upload/v1777530729/Captureskill_dj3zir.png",
+  technologies: [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "TailwindCSS",
+    "Firebase",
+    "JWT"
+  ],
+  liveUrl: "https://skillbridge-frontend-bay.vercel.app/",
+  githubUrl: "https://github.com/arifulmit17/skillbridge-frontend",
+  featured: true,
+  details: "/project2",
+},
    {
   title: "Green Community",
   description:

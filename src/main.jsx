@@ -9,9 +9,10 @@ import {
 } from "react-router";
 import MainLayout from './Layout/MainLayout.jsx'
 
-import TutorDetails from './Projects/TutorDetails.jsx'
+
 import SubscriptionDetails from './Projects/SubscriptionDetails.jsx'
 import Project1Details from './Projects/Project1Details.jsx'
+import Project2Details from './Projects/Project2Details.jsx'
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
       },
       {
         path:'project2',
-        Component: TutorDetails
+        Component: Project2Details
       },
       {
         path:'subscribe',
