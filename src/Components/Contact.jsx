@@ -58,10 +58,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        'service_cmgkkbp',
+        'service_i0ynknj',
         'template_q2t3vb4',
         form.current,
-        'qIMKBOXacFHSNWKpa'
+        '0KCF9jg7eLfqO-N_Y'
       )
       .then(
         () => {
