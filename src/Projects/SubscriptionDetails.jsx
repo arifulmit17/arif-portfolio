@@ -5,6 +5,10 @@ const SubscriptionDetails = () => {
         <div className='w-11/12 mx-auto'>
             <h1 className='font-bold text-2xl text-center text-primary'>Subscription Box</h1>
             <div  className='my-5 bg-primary/20 p-5 rounded-2xl'>
+                <p>This site focuses to facilitate users to avail diverse subscription packages of popular streaming services on
+monthly basis</p>
+            </div>
+            <div  className='my-5 bg-primary/20 p-5 rounded-2xl'>
                 <h1 className='font-bold '>Technology stack used</h1>
                 <ul className='list-disc ml-10'>
                     <li>React</li>
@@ -14,10 +18,7 @@ const SubscriptionDetails = () => {
                     <li>Firebase</li>
                 </ul>
             </div>
-            <div  className='my-5 bg-primary/20 p-5 rounded-2xl'>
-                <p>This site focuses to facilitate users to avail diverse subscription packages of popular streaming services on
-monthly basis</p>
-            </div>
+            
            <div  className='my-5 bg-primary/20 p-5 rounded-2xl'>
             <h1 ><span className='font-bold'>Live link:</span> <span className='text-blue-500'>https://batch11a09subscriptionbox.netlify.app/</span> </h1>
            </div>

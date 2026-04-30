@@ -23,15 +23,15 @@ const Projects = () => {
   image:
     "https://res.cloudinary.com/dfhlm4cyw/image/upload/v1777530729/Captureskill_dj3zir.png",
   technologies: [
-    "React",
     "Next.js",
     "TypeScript",
     "Node.js",
     "Express.js",
-    "MongoDB",
+    "PostgreSQL",
+    "shadcn/ui",
     "TailwindCSS",
-    "Firebase",
-    "JWT"
+    "Prisma ORM",
+    "BetterAuth",
   ],
   liveUrl: "https://skillbridge-frontend-bay.vercel.app/",
   githubUrl: "https://github.com/arifulmit17/skillbridge-frontend",
