@@ -21,25 +21,36 @@ const Projects = () => {
       description:
         "This site is an educational platform for teaching enthusiasts and students for benefits like tutor choice based on language, own tutorial upload.",
       image:
-        "https://res.cloudinary.com/dfhlm4cyw/image/upload/v1754313041/Capturetutor_xgtnbo.png",
+        "https://res.cloudinary.com/dfhlm4cyw/image/upload/v1777527218/Capturegreen_vedjps.png",
       technologies: ["React", "Node.js", "MongoDB", "Firebase","TailwindCSS","Express.js","Javascript","JWT"],
       liveUrl: "https://tutor-hire-online.netlify.app/",
       githubUrl: "https://github.com/arifulmit17/tutor-hire-client",
       featured: true,
       details:"/tutor",
     },
-    {
-      title: "Garden Community",
-      description:
-        "This site is a gardening community oriented platform for gardening enthusiasts with many benefits such as weekly discussions, forums, group meetings, one to one sessions etc.",
-      image:
-        "https://res.cloudinary.com/dfhlm4cyw/image/upload/v1754312947/Capturegarden_std2jq.png",
-      technologies: ["React", "Node.js", "MongoDB", "Firebase","TailwindCSS","Express.js","Javascript"],
-      liveUrl: "https://garden-community-online.netlify.app/",
-      githubUrl: "https://github.com/arifulmit17/garden-community-client",
-      featured: true,
-       details:"/garden",
-    },
+   {
+  title: "Green Community",
+  description:
+    "A full-stack platform where users can share, explore, and support eco-friendly ideas. Users can submit ideas, vote on others’ contributions, and monetize premium ideas, fostering collaboration and sustainability.",
+  image:
+    "https://res.cloudinary.com/dfhlm4cyw/image/upload/v1777527218/Capturegreen_vedjps.png", // you can replace with updated screenshot later
+  technologies: [
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "shadcn/ui",
+    "Node.js",
+    "Express.js",
+    "PostgreSQL",
+    "Prisma ORM",
+    "Stripe",
+    "JWT",
+  ],
+  liveUrl: "https://green-community-frontend.vercel.app",
+  githubUrl: "https://github.com/arifulmit17/green-community-frontend", 
+  featured: true,
+  details: "/project1",
+},
     {
       title: "Subscription Box",
       description:
