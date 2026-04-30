@@ -95,65 +95,81 @@ Zod: "https://res.cloudinary.com/dfhlm4cyw/image/upload/v1777528800/Zod--Streaml
 };
 
   return (
-    <section id="skill" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
-              Skills
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A comprehensive toolkit for building modern, scalable, and
-              user-friendly applications
-            </p>
-          </div>
+    <section id="skill" className="py-16 md:py-20 bg-background">
+  <div className="container mx-auto px-4">
+    <div className="max-w-6xl mx-auto">
 
-          {/* Animate cards only while in view */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }} // retrigger on re-entry
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {skillCategories.map((category) => (
-              <motion.div
-                key={category.title}
-                variants={cardVariants}
-                className="card-portfolio"
-              >
-                <div className="flex items-center mb-6">
-                  <h3 className="text-xl font-semibold">{category.title}</h3>
-                </div>
+      {/* Heading */}
+      <div className="text-center mb-12 md:mb-16">
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gradient">
+          Skills
+        </h2>
 
-                <div className="grid grid-cols-3 gap-4">
-                  {category.skills.map((skill) => (
-                    <div
-                      key={skill.name}
-                      className={`group flex flex-col items-center p-4 rounded-xl bg-gradient-to-br ${category.gradient} hover:scale-105 transition-all duration-300 cursor-pointer border border-border/50 hover:border-primary/30`}
-                    >
-                      <div className="w-12 h-12 mb-3 flex items-center justify-center">
-                        <img
-                          src={skill.logo}
-                          alt={`${skill.name} logo`}
-                          className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-200"
-                          onError={(e) => {
-                            e.currentTarget.style.display = "none";
-                          }}
-                        />
-                      </div>
-                      <span className="text-xs font-medium text-center text-foreground/80 group-hover:text-primary transition-colors duration-200">
-                        {skill.name}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
+        <p className="text-sm md:text-lg text-muted-foreground max-w-2xl mx-auto">
+          A comprehensive toolkit for building modern, scalable, and user-friendly applications
+        </p>
       </div>
-    </section>
+
+      {/* Skill Categories Grid */}
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+      >
+
+        {skillCategories.map((category) => (
+          <motion.div
+            key={category.title}
+            variants={cardVariants}
+            className="card-portfolio p-4 md:p-6"
+          >
+
+            {/* Title */}
+            <div className="flex items-center mb-4 md:mb-6">
+              <h3 className="text-lg md:text-xl font-semibold">
+                {category.title}
+              </h3>
+            </div>
+
+            {/* Skills Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
+
+              {category.skills.map((skill) => (
+                <div
+                  key={skill.name}
+                  className={`group flex flex-col items-center p-3 md:p-4 rounded-xl bg-gradient-to-br ${category.gradient} hover:scale-105 transition-all duration-300 cursor-pointer border border-border/50 hover:border-primary/30`}
+                >
+
+                  {/* Icon */}
+                  <div className="w-10 h-10 md:w-12 md:h-12 mb-2 md:mb-3 flex items-center justify-center">
+                    <img
+                      src={skill.logo}
+                      alt={`${skill.name} logo`}
+                      className="w-8 h-8 md:w-10 md:h-10 object-contain group-hover:scale-110 transition-transform duration-200"
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none";
+                      }}
+                    />
+                  </div>
+
+                  {/* Name */}
+                  <span className="text-[10px] sm:text-xs md:text-sm font-medium text-center text-foreground/80 group-hover:text-primary transition-colors duration-200">
+                    {skill.name}
+                  </span>
+
+                </div>
+              ))}
+
+            </div>
+          </motion.div>
+        ))}
+
+      </motion.div>
+    </div>
+  </div>
+</section>
   );
 };
 

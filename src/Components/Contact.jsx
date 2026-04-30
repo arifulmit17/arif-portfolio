@@ -82,155 +82,189 @@ const Contact = () => {
   };
 
   return (
-    <section id='contacts' className="py-20 bg-background relative">
-      {/* Inject animation styles */}
-      <style>{styles}</style>
+    <section id="contacts" className="py-16 md:py-20 bg-background relative">
 
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
-              Let's Work Together
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Have a project in mind? I'd love to hear about it. Let's discuss how we can bring your ideas to life.
-            </p>
-          </div>
+  {/* Animation styles */}
+  <style>{styles}</style>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div ref={leftRef} className="fade-in-left">
-              <div className="space-y-8">
-                <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>
-                
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-primary/10 rounded-xl">
-                      <Mail className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-medium">Email</div>
-                      <div className="text-muted-foreground">ariful.haque1510@gmail.com</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-primary/10 rounded-xl">
-                      <Phone className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-medium">Phone</div>
-                      <div className="text-muted-foreground">+880 1757173149</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-primary/10 rounded-xl">
-                      <MapPin className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-medium">Location</div>
-                      <div className="text-muted-foreground">Rajshahi, Bangladesh</div>
-                    </div>
-                  </div>
-                </div>
+  <div className="container mx-auto px-4">
+    <div className="max-w-6xl mx-auto">
 
-                {/* Social Links */}
-                <div className="pt-8">
-                  <h4 className="font-medium mb-4">Follow Me</h4>
-                  <div className="flex space-x-4">
-                    <a target="_blank" href="https://github.com/arifulmit17" className="p-3 bg-secondary hover:bg-primary hover:text-primary-foreground rounded-xl transition-all duration-200 hover:scale-105">
-                      <Github className="w-5 h-5" />
-                    </a>
-                    <a target="_blank" href="https://www.linkedin.com/in/md-ariful-haque-sunny-803b12b0/" className="p-3 bg-secondary hover:bg-primary hover:text-primary-foreground rounded-xl transition-all duration-200 hover:scale-105">
-                      <Linkedin className="w-5 h-5" />
-                    </a>
-                  </div>
+      {/* Heading */}
+      <div className="text-center mb-12 md:mb-16">
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gradient">
+          Let's Work Together
+        </h2>
+
+        <p className="text-sm md:text-lg text-muted-foreground max-w-2xl mx-auto">
+          Have a project in mind? I'd love to hear about it. Let's discuss how we can bring your ideas to life.
+        </p>
+      </div>
+
+      {/* Grid Layout */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12">
+
+        {/* Contact Info */}
+        <div ref={leftRef} className="fade-in-left space-y-8">
+
+          <h3 className="text-xl md:text-2xl font-semibold text-center lg:text-left">
+            Get in Touch
+          </h3>
+
+          {/* Info items */}
+          <div className="space-y-5 md:space-y-6">
+
+            {/* Email */}
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-primary/10 rounded-xl flex-shrink-0">
+                <Mail className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+              </div>
+
+              <div>
+                <div className="font-medium text-sm md:text-base">Email</div>
+                <div className="text-muted-foreground text-sm md:text-base break-all">
+                  ariful.haque1510@gmail.com
                 </div>
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div ref={rightRef} className="fade-in-right">
-              <form ref={form} onSubmit={sendEmail} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 bg-base-100 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200"
-                      placeholder="Your Name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 bg-base-100 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200"
-                      placeholder="your@email.com"
-                    />
-                  </div>
+            {/* Phone */}
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-primary/10 rounded-xl flex-shrink-0">
+                <Phone className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+              </div>
+
+              <div>
+                <div className="font-medium text-sm md:text-base">Phone</div>
+                <div className="text-muted-foreground text-sm md:text-base">
+                  +880 1757173149
                 </div>
-                
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-base-100 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200"
-                    placeholder="Project Discussion"
-                  />
+              </div>
+            </div>
+
+            {/* Location */}
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-primary/10 rounded-xl flex-shrink-0">
+                <MapPin className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+              </div>
+
+              <div>
+                <div className="font-medium text-sm md:text-base">Location</div>
+                <div className="text-muted-foreground text-sm md:text-base">
+                  Rajshahi, Bangladesh
                 </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 bg-base-100 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200 resize-none"
-                    placeholder="Tell me about your project..."
-                  />
-                </div>
-                
-                <button
-                  type="submit"
-                  className="w-full bg-primary/20 text-primary-foreground px-8 py-4 rounded-xl font-medium hover:bg-primary/90 transition-all duration-200 hover:scale-[1.02] flex items-center justify-center gap-2"
-                >
-                  Send Message
-                  <Send className="w-5 h-5" />
-                </button>
-              </form>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Social */}
+          <div className="pt-6 md:pt-8">
+            <h4 className="font-medium mb-4 text-center lg:text-left">
+              Follow Me
+            </h4>
+
+            <div className="flex justify-center lg:justify-start gap-4">
+              <a
+                target="_blank"
+                href="https://github.com/arifulmit17"
+                className="p-3 bg-secondary hover:bg-primary hover:text-primary-foreground rounded-xl transition hover:scale-105"
+              >
+                <Github className="w-5 h-5 md:w-6 md:h-6" />
+              </a>
+
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/md-ariful-haque-sunny-803b12b0/"
+                className="p-3 bg-secondary hover:bg-primary hover:text-primary-foreground rounded-xl transition hover:scale-105"
+              >
+                <Linkedin className="w-5 h-5 md:w-6 md:h-6" />
+              </a>
             </div>
           </div>
+
         </div>
+
+        {/* Form */}
+        <div ref={rightRef} className="fade-in-right">
+
+          <form ref={form} onSubmit={sendEmail} className="space-y-5 md:space-y-6">
+
+            {/* Name + Email */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+
+              <div>
+                <label className="block text-sm font-medium mb-2">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  placeholder="Your Name"
+                  className="w-full px-4 py-3 text-sm md:text-base bg-base-100 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-2">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  placeholder="your@email.com"
+                  className="w-full px-4 py-3 text-sm md:text-base bg-base-100 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                />
+              </div>
+
+            </div>
+
+            {/* Subject */}
+            <div>
+              <label className="block text-sm font-medium mb-2">Subject</label>
+              <input
+                type="text"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+                placeholder="Project Discussion"
+                className="w-full px-4 py-3 text-sm md:text-base bg-base-100 border border-border rounded-xl"
+              />
+            </div>
+
+            {/* Message */}
+            <div>
+              <label className="block text-sm font-medium mb-2">Message</label>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                rows={5}
+                required
+                placeholder="Tell me about your project..."
+                className="w-full px-4 py-3 text-sm md:text-base bg-base-100 border border-border rounded-xl resize-none"
+              />
+            </div>
+
+            {/* Button */}
+            <button
+              type="submit"
+              className="w-full bg-primary/20 hover:bg-primary/90 text-primary-foreground px-6 py-3 md:py-4 rounded-xl font-medium transition flex items-center justify-center gap-2"
+            >
+              Send Message
+              <Send className="w-5 h-5" />
+            </button>
+
+          </form>
+        </div>
+
       </div>
-    </section>
+    </div>
+  </div>
+</section>
   );
 };
 

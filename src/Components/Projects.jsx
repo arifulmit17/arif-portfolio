@@ -76,128 +76,145 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">
-              Featured Projects
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A showcase of my recent work, demonstrating technical skills and
-              creative problem-solving
-            </p>
-          </motion.div>
+   <section id="projects" className="py-16 md:py-20">
+  <div className="container mx-auto px-4">
+    <div className="max-w-6xl mx-auto">
 
-          {/* Project List */}
-          <div className="space-y-12">
-            {projects.map((project, index) => {
-              const direction = index % 2 === 0 ? "left" : "right";
-              return (
-                <motion.div
-                  key={project.title}
-                  className={`grid lg:grid-cols-2 gap-8 items-center ${
-                    index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
-                  }`}
-                  custom={direction}
-                  variants={fadeVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.3 }}
-                >
-                  {/* Project Image */}
-                  <div
-                    className={`${
-                      index % 2 === 1 ? "lg:col-start-2" : ""
-                    } relative group`}
-                  >
-                    <div className="overflow-hidden rounded-2xl shadow-elegant group-hover:shadow-hover transition-all duration-300">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-64 md:h-80 object-contain group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    {project.featured && (
-                      <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-                        Featured
-                      </div>
-                    )}
+      {/* Header */}
+      <motion.div
+        className="text-center mb-12 md:mb-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gradient">
+          Featured Projects
+        </h2>
+
+        <p className="text-sm md:text-lg text-muted-foreground max-w-2xl mx-auto">
+          A showcase of my recent work, demonstrating technical skills and creative problem-solving
+        </p>
+      </motion.div>
+
+      {/* Projects */}
+      <div className="space-y-14 md:space-y-16">
+
+        {projects.map((project, index) => {
+          const direction = index % 2 === 0 ? "left" : "right";
+
+          return (
+            <motion.div
+              key={project.title}
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-center p-5 md:p-8 rounded-2xl shadow-2xl ${
+                index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
+              }`}
+              custom={direction}
+              variants={fadeVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+
+              {/* Image */}
+              <div
+                className={`relative group w-full ${
+                  index % 2 === 1 ? "lg:col-start-2" : ""
+                }`}
+              >
+                <div className="overflow-hidden rounded-2xl shadow-elegant group-hover:shadow-hover transition-all duration-300">
+
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-56 sm:h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+
+                </div>
+
+                {project.featured && (
+                  <div className="absolute top-3 left-3 md:top-4 md:left-4 bg-primary text-primary-foreground px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium">
+                    Featured
+                  </div>
+                )}
+              </div>
+
+              {/* Content */}
+              <div
+                className={`w-full ${
+                  index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""
+                }`}
+              >
+
+                <div className="space-y-5 md:space-y-6">
+
+                  {/* Title */}
+                  <h3 className="text-xl md:text-3xl font-bold">
+                    {project.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  {/* Tech stack */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="bg-primary/10 text-primary px-2 md:px-3 py-1 rounded-lg text-[10px] md:text-sm font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
 
-                  {/* Project Content */}
-                  <div
-                    className={`${
-                      index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""
-                    }`}
-                  >
-                    <div className="space-y-6">
-                      <div>
-                        <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                          {project.title}
-                        </h3>
-                        <p className="text-muted-foreground text-lg leading-relaxed">
-                          {project.description}
-                        </p>
-                      </div>
+                  {/* Buttons */}
+                  <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
 
-                      {/* Technologies */}
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech) => (
-                          <span
-                            key={tech}
-                            className="bg-primary/10 text-primary px-3 py-1 rounded-lg text-sm font-medium"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
+                    <a
+                      target="_blank"
+                      href={project.liveUrl}
+                      className="inline-flex items-center justify-center gap-2 bg-primary text-black px-4 md:px-6 py-2 md:py-3 rounded-xl font-medium hover:bg-primary/90 transition"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Live Demo
+                    </a>
 
-                      {/* Project Links */}
-                      <div className="flex gap-4">
-                        <a
-                        target="_blank"
-                          href={project.liveUrl}
-                          className="inline-flex items-center gap-2 bg-primary text-black px-6 py-3 rounded-xl font-medium hover:bg-primary/90 transition-colors duration-200"
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                          Live Demo
-                        </a>
-                        <a
-                        target="_blank"
-                          href={project.githubUrl}
-                          className="inline-flex items-center gap-2 border border-border px-6 py-3 rounded-xl font-medium hover:bg-secondary transition-colors duration-200"
-                        >
-                          <Github className="w-4 h-4" />
-                          View Code
-                        </a>
-                        <Link to={project.details}
-                        target="_blank"
-                          href={project.liveUrl}
-                          className="inline-flex items-center gap-2 bg-primary text-black px-6 py-3 rounded-xl font-medium hover:bg-primary/90 transition-colors duration-200"
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                          Project Details
-                        </Link>
-                      </div>
-                    </div>
+                    <a
+                      target="_blank"
+                      href={project.githubUrl}
+                      className="inline-flex items-center justify-center gap-2 border border-border px-4 md:px-6 py-2 md:py-3 rounded-xl font-medium hover:bg-secondary transition"
+                    >
+                      <Github className="w-4 h-4" />
+                      Code
+                    </a>
+
+                    <Link
+                      to={project.details}
+                      target="_blank"
+                      className="inline-flex items-center justify-center gap-2 bg-primary text-black px-4 md:px-6 py-2 md:py-3 rounded-xl font-medium hover:bg-primary/90 transition"
+                    >
+                      <ArrowRight className="w-4 h-4" />
+                      Details
+                    </Link>
+
                   </div>
-                </motion.div>
-              );
-            })}
-          </div>
 
-          
-        </div>
+                </div>
+
+              </div>
+
+            </motion.div>
+          );
+        })}
+
       </div>
-    </section>
+
+    </div>
+  </div>
+</section>
   );
 };
 
