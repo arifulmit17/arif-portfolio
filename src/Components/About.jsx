@@ -51,15 +51,23 @@ const About = () => {
                 <h3 className="text-2xl md:text-3xl font-semibold">
                   Hello, I'm Arif
                 </h3>
-                <p className="text-lg text-muted-foreground text-justify leading-relaxed">
-                  With over 14 months of experience in web development, I specialize in creating 
-                  modern, responsive applications using NextJS, React, Express, and other latest web technologies. 
-                  My passion lies in building user-centric solutions that not only look great but also 
-                  deliver exceptional performance.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  When I'm not coding, you'll find me exploring new technologies, learning about software architecture and efficiency
-                </p>
+               <div className="text-lg text-muted-foreground text-justify leading-relaxed">
+  <p>
+    With over 14 months of experience in web development, I build modern, scalable, and responsive 
+    applications using Next.js, React, Express, and related technologies. I focus on creating 
+    user-centric solutions that balance clean design, performance, and maintainability.
+  </p>
+  <br />
+  <p>
+    I stay updated with industry trends and best practices to deliver efficient, high-quality products 
+    with seamless user experiences.
+  </p>
+<br />
+  <p>
+    Outside of work, I enjoy gardening and playing the guitar, which help me stay creative and balanced.
+  </p>
+</div>
+             
 
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-6 pt-6">

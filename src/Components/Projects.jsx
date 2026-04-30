@@ -112,7 +112,7 @@ const Projects = () => {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-64 md:h-80 object-contain group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                     {project.featured && (
